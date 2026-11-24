@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffaf3;
+    color: #333;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: #25150f;
+    color: white;
+}
+
+.logo {
+    color: orange;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: orange;
+}
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+    background: #ff8c00;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #e67300;
+}
+
+/* HERO SECTION */
+
+.hero {
+    height: 550px;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),
+                    rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-content span {
+    color: orange;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* FOOD MENU */
+
+.menu {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.menu h2,
+.offers h2,
+.reviews h2,
+.contact h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: #381c10;
+}
+
+.food-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.food-card {
+    background: white;
+    width: 280px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px #ddd;
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.food-card h3 {
+    margin: 15px 0;
+}
+
+.food-card p {
+    color: #666;
+}
+
+.food-card h4 {
+    color: #e67300;
+    margin: 12px;
+    font-size: 20px;
+}
+
+.food-card button {
+    background: #ff8c00;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* SPECIAL OFFERS */
+
+.offers {
+    text-align: center;
+    padding: 60px 8%;
+    background: #fff0dc;
+}
+
+.offer-box {
+    background: #351a10;
+    color: white;
+    padding: 45px 20px;
+    margin-top: 30px;
+    border-radius: 15px;
+}
+
+.offer-box h1 {
+    color: orange;
+    font-size: 55px;
+    margin: 15px;
+}
+
+.offer-box p {
+    margin-bottom: 25px;
+}
+
+/* REVIEWS */
+
+.reviews {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    background: white;
+    padding: 25px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #ddd;
+}
+
+.review-card h3 {
+    color: #e67300;
+    margin-bottom: 15px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: #351a10;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact h2 {
+    color: orange;
+}
+
+.contact p {
+    margin: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #1c100c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        height: 450px;
+        padding: 0 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .food-container,
+    .review-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .food-card,
+    .review-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
